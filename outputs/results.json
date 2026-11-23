@@ -1,0 +1,84 @@
+{
+  "rack_asp": 3000000,
+  "total_cost": {
+    "low": 2463490.0,
+    "base": 2821790.0,
+    "high": 3414340.0
+  },
+  "odm_gross_margin": {
+    "low_cost": 0.17883666666666667,
+    "base": 0.059403333333333336,
+    "high_cost": -0.13811333333333334
+  },
+  "odm_gross_profit_base": 178210.0,
+  "cost_per_gpu_base": 39191.52777777778,
+  "non_nvidia_bom_base": 368390.0,
+  "nvidia_share_of_asp": 0.8178,
+  "subsystem": [
+    {
+      "subsystem": "運算晶片",
+      "cost": 2291400,
+      "share_of_cost": 0.8120377490883446,
+      "share_of_asp": 0.7638
+    },
+    {
+      "subsystem": "NVLink 互連",
+      "cost": 232000,
+      "share_of_cost": 0.08221731595901892,
+      "share_of_asp": 0.07733333333333334
+    },
+    {
+      "subsystem": "液冷散熱",
+      "cost": 79490,
+      "share_of_cost": 0.02817006226544144,
+      "share_of_asp": 0.02649666666666667
+    },
+    {
+      "subsystem": "電源",
+      "cost": 78400,
+      "share_of_cost": 0.027783782634427084,
+      "share_of_asp": 0.026133333333333335
+    },
+    {
+      "subsystem": "運算托盤",
+      "cost": 73800,
+      "share_of_cost": 0.026153611714549985,
+      "share_of_asp": 0.0246
+    },
+    {
+      "subsystem": "整合測試",
+      "cost": 35000,
+      "share_of_cost": 0.012403474390369233,
+      "share_of_asp": 0.011666666666666667
+    },
+    {
+      "subsystem": "機構",
+      "cost": 31700,
+      "share_of_cost": 0.011234003947848705,
+      "share_of_asp": 0.010566666666666667
+    }
+  ],
+  "monte_carlo": {
+    "p10_total": 2755970.1473387037,
+    "p50_total": 2890401.494950773,
+    "p90_total": 3062889.827236037,
+    "p10_margin": -0.02096327574534559,
+    "p50_margin": 0.03653283501640893,
+    "p90_margin": 0.08134328422043209,
+    "prob_margin_below_3pct": 0.43845,
+    "prob_loss": 0.21015
+  },
+  "cost_down_total_saving": 70143.79999999981,
+  "cost_down_margin_after": 0.08278459999999994,
+  "b200_should_cost": 6400.0,
+  "b200_chip_gross_margin": 0.84,
+  "tco": {
+    "capex": 3300000,
+    "annual_depreciation": 660000.0,
+    "annual_colo": 317520,
+    "annual_total": 977520.0,
+    "utilized_gpu_hours": 504576.0,
+    "cost_per_gpu_hour": 1.9373097412480975,
+    "capex_share": 0.6751780014731157
+  }
+}
