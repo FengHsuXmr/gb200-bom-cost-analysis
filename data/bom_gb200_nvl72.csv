@@ -1,0 +1,22 @@
+item_id,subsystem,item,qty_per_rack,unit_cost_low,unit_cost_base,unit_cost_high,vendor_type,key_suppliers,tw_suppliers,source_note
+C01,運算晶片,GB200 Superchip (Bianca板: 1 Grace CPU + 2 B200 GPU + LPDDR5X),36,55000,60000,70000,NVIDIA,NVIDIA / TSMC / SK hynix / Micron,台積電(2330) 日月光(3711) 欣興(3037),HSBC/Barron's 估超級晶片 6-7 萬美元；大摩估 GPU 約占整櫃 72%
+C02,運算晶片,ConnectX-7 400G 網卡,72,1000,1200,1800,NVIDIA,NVIDIA (Mellanox),—,市場報價推估，每 compute tray 4 張
+C03,運算晶片,BlueField-3 DPU,18,2000,2500,3500,NVIDIA,NVIDIA (Mellanox),—,市場報價推估，每 tray 1 張
+T01,運算托盤,E1.S NVMe SSD 3.84TB,72,350,450,600,第三方,Samsung / Kioxia / Solidigm,群聯(8299),每 tray 4 顆，依 2025-26 企業級 SSD 行情推估
+T02,運算托盤,Compute tray 1U 機構件 (鈑金/導風/面板),18,600,800,1100,第三方,—,勤誠(8210) 營邦(3693),模型假設
+T03,運算托盤,Tray 周邊板卡 (I/O板/DC-SCM BMC/配電板/線材),18,1100,1500,2000,第三方,Aspeed / Amphenol,信驊(5274) 金像電(2368) 貿聯-KY(3665),模型假設
+K01,液冷散熱,Compute tray 冷板模組 (CPU/GPU 冷板+管路+快接頭),18,1600,1880,2260,第三方,CoolIT / Boyd / Parker,奇鋐(3017) 雙鴻(3324) 富世達(6805),大摩：GB300 為 2260/tray；GB200 約低 20% 回推
+K02,液冷散熱,Switch tray 冷板模組,9,700,850,1020,第三方,CoolIT / Boyd,奇鋐(3017) 雙鴻(3324),大摩：GB300 為 1020/tray，回推 GB200
+K03,液冷散熱,機櫃分歧管 Manifold + 快接頭,1,6000,8000,11000,第三方,Parker / CPC / Stäubli,健策(3653) 富世達(6805),模型假設
+K04,液冷散熱,In-rack CDU 250kW (液對液),1,0,30000,40000,第三方,Vertiv / Supermicro / CoolIT,台達電(2308) 雙鴻(3324),Wing VC：250kW CDU 約多 3.2 萬美元；low=改用機房 in-row CDU
+N01,NVLink 互連,NVLink Switch tray (2 顆 NVSwitch5 ASIC),9,14000,18000,24000,NVIDIA,NVIDIA,—,模型假設；互連合計 20-30 萬美元 (yam 報導)
+N02,NVLink 互連,NVLink 銅纜背板 Cable Cartridge (Spine),1,50000,70000,90000,第三方,Amphenol / Molex,貿聯-KY(3665) 嘉澤(3533),模型假設；超過 5000 條銅纜、約 3.2 公里
+P01,電源,33kW Power Shelf (6×5.5kW PSU + PMC),8,5000,6500,8000,第三方,Delta / Lite-On / Flex / Vertiv,台達電(2308) 光寶科(2301),NVIDIA DGX 文件：8 shelf、N+N 備援；單價為模型假設
+P02,電源,BBU / 超級電容儲能模組,8,1200,2000,3000,第三方,Delta / Lite-On,台達電(2308) 鈺邦(6449) 新盛力(4931),模型假設；選配
+P03,電源,DC 匯流排 Busbar + 夾具,1,3500,5000,7000,第三方,—,嘉澤(3533) 勤誠(8210),模型假設
+P04,電源,Tray 配電板 PDB,18,200,300,450,第三方,—,台達電(2308),模型假設
+M01,機構,48U MGX 機櫃本體 + 線槽,1,10000,15000,20000,第三方,—,勤誠(8210) 鴻海(2317),模型假設
+M02,機構,伺服器滑軌,27,70,100,140,第三方,—,川湖(2059),模型假設；18 compute + 9 switch tray
+M03,機構,OOB 管理交換器 1G/10G,2,2000,3000,4000,第三方,—,智邦(2345),模型假設
+M04,機構,機櫃內雜項線材/標籤/包材,1,5000,8000,11000,第三方,—,貿聯-KY(3665),模型假設
+I01,整合測試,L10/L11 組裝、整櫃測試、燒機、物流,1,25000,35000,50000,ODM,—,鴻海(2317) 廣達(2382) 緯創(3231) 緯穎(6669),大摩：純組裝毛利約 5 萬美元；整合成本為模型假設

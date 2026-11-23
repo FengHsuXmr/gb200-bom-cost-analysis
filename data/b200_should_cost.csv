@@ -1,0 +1,5 @@
+component,cost_low,cost_base,cost_high,driver,source_note
+邏輯晶粒 (2×~800mm² TSMC 4NP),1700,1950,2200,晶圓價約 17000 美元/片、良率,Epoch AI B200 cost breakdown
+HBM3E 192GB,2700,2900,3300,每 GB 14-17 美元 (中心值 15),Epoch AI / Silicon Analysts
+CoWoS-L 先進封裝,1100,1300,1500,封裝產能與良率,Epoch AI
+其他模組元件 (基板/被動元件),200,250,300,—,Epoch AI
