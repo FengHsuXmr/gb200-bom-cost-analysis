@@ -5,6 +5,10 @@
 
 > 所有單價為依公開研調與媒體報導推估的**模型值**，不是任何公司的實際報價。每個料號的依據寫在 `data/bom_gb200_nvl72.csv` 的 `source_note` 欄位。
 
+**作品連結：** [互動式成本儀表板](https://claude.ai/artifact/VfYgfsNUYY591URLMDzhDy)｜[分析報告](https://claude.ai/artifact/BsYMxCid1GbcYXNe6FAX4m)｜[BOM 成本試算表](https://claude.ai/artifact/394eb8yxvz3viuVZ5sLCAW)
+
+![子系統成本](outputs/charts/01_subsystem_cost.png)
+
 ## 主要結論（base case，整櫃售價 300 萬美元）
 
 | 指標 | 數值 |
@@ -22,6 +26,25 @@
 2. **ODM 的風險在晶片採購模式**：若 ODM 自行買斷晶片再轉賣，晶片價格波動會讓毛利率在負值到 8% 之間擺盪；改採 NVIDIA 代購（consign／pass-through）可把風險移出 ODM 損益表。
 3. **非 NVIDIA 料件才是降本主戰場**：非 NVIDIA 料件（液冷、電源、機構、線材、測試等）合計約 $37 萬，透過規格調整（CDU、SSD）與雙供應商議價，可提升約 2.3 個百分點毛利率。
 4. **HBM 是晶片成本最大變數**：HBM3E 每 GB 從 15 美元漲到 24 美元，B200 成本增加約 27%。
+
+## 圖表
+
+| 敏感度分析 | 蒙地卡羅毛利率分佈 |
+|---|---|
+| ![敏感度](outputs/charts/03_tornado.png) | ![蒙地卡羅](outputs/charts/04_monte_carlo_margin.png) |
+| **降本方案** | **HBM 價格敏感度** |
+| ![降本方案](outputs/charts/05_cost_down.png) | ![HBM](outputs/charts/06_hbm_sensitivity.png) |
+
+## 交易模式比較：ODM 買斷 vs. 客戶代購
+
+| | ODM 買斷 | 客戶代購（晶片不入帳） |
+|---|---|---|
+| ODM 認列營收 | $3.00M | 約 $0.55M |
+| ODM 毛利 | $178K | $178K |
+| 毛利率 | 5.9% | 32.6% |
+| 蒙地卡羅虧損機率 | 21% | 約 0% |
+
+毛利金額相同，毛利率與風險差很多。晶片加價超過約 1%，ODM 承擔買斷風險才划算。
 
 ## 專案結構
 
